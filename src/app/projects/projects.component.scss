@@ -1,0 +1,111 @@
+$sky: rgba(0, 255, 221, 0.753);
+$gray: #737173;
+$dark: #19181A;
+$background: #26262A;
+$pink: #FA666F;
+$green: #1cff2f;
+.text-green{
+    color: $green;
+}
+
+#projects{
+    background-color:  rgba(38, 38, 42, 0.721);
+    margin:0;
+    border-top: 1.5px solid $pink;
+    border-bottom: 2px solid $gray;
+}
+.tit{
+
+  
+    opacity: 0.3;
+    z-index:9;
+}
+.card{
+    background-color: rgba(255, 255, 255, 0.217);
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+    &:hover .img-container{
+        transform: rotate(4deg);
+    }
+    .name{
+        font-weight: bold;
+        font-size: 1.3rem;
+        color: white;
+    }
+    a{  
+    
+        font-weight: bold;
+        text-decoration: none;
+        color: $background;
+        
+    }
+
+}
+
+
+
+
+.flip-box {
+    background-color: transparent;
+    width: 20rem;
+    height: 9.5rem;
+  //  border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    .link{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 2px;
+    }
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: $background;
+    border: 2px solid $green;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+  @media only screen and (max-width: 420px) {
+    .flip-box {
+
+      width: 17rem;
+
+    }
+  }

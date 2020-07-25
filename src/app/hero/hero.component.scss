@@ -1,0 +1,89 @@
+
+*{
+    font-family: 'Baloo Paaji 2', cursive;
+}
+$gray: #737173;
+$dark: #19181A;
+$background: #26262A;
+$pink: #FA666F;
+#container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color:  rgba(38, 38, 42, 0.621);
+   
+
+}
+
+.pink{
+    color: rgb(85, 255, 0);
+}
+.hero{
+    position: relative;
+    color: white;
+
+    
+    //opacity: 0.7;
+    .greet{
+        padding-top: 5rem;
+        padding-left: 10%;
+        h3{
+            //font-size: 4.6rem;
+            font-size: 7vw;
+        }
+    }
+}
+#profile{
+
+    .inner-column{
+        color: rgba(255, 255, 255, 0.809);
+        margin-top: 3rem;
+        //border-radius: 100%;
+        //border: 2px solid rgba(255, 255, 0, 0.247);
+        padding: 10px;
+        align-items: center;
+        .img_container{
+            
+            overflow: hidden;
+            width: 15rem;
+            height: 15rem;
+            border-radius: 100%;
+            border: 2px solid #101116;
+            border-left:  2px solid  #1cff2f;
+            img{
+                position: relative;
+                left: -2rem;
+                height: 100%;
+            }
+        }
+        .box-bottom{
+            border-top: 1px solid #1cff2f;
+            margin-top: 2rem;
+            padding: 1rem 6rem;
+            width: 100%;
+            background-color: rgba(77, 73, 74, 0.178);
+            height: 10rem;
+        }
+        .contactMe{
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 1.4rem;
+            color: #1cff2f;
+            transition: font-size 1s, color 1s;
+            &:hover{
+                font-size: 1.7rem;
+                color: #48ff00;
+            }
+        }
+
+
+    }
+    
+
+}
+
+@media only screen and (max-width: 420px) {
+    .box-bottom{
+        height: 15rem!important;
+    }
+}

@@ -1,0 +1,48 @@
+<section class="container-fluid">
+ 
+    <div class="container form-container" [@cForm]="isFormVisible ? 'open' : 'closed'">
+        <h3 class="contact">Contact Form</h3>
+        <form  [formGroup]="contactForm">
+            <div class="row">
+                <div class="form-group col-12 col-lg-6 col-md-6 col-sm-6">
+                    <label for="name">Name </label>
+                    <label class="text-pink pl-2" *ngIf="this.contactForm.controls.name.errors && this.submited">
+                        *is required
+                    </label>
+                    <input id="name" required type="text" formControlName="name"  class="form-control"  placeholder="Your Name">
+                    
+                </div>
+                <div class="form-group col-12 col-lg-6 col-md-6 col-sm-6 ">
+                    <label for="email">Email</label>
+                    <label class="text-pink pl-2" *ngIf="this.contactForm.controls.email.errors && this.submited">
+                        *Email is required
+                    </label>
+                    <input id="email" required type="email" formControlName="email" class="form-control"  placeholder="name@example.com">
+                </div>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="msg">Msg</label>
+                <label class="text-pink pl-2" *ngIf="this.contactForm.controls.message.errors && this.submited">
+                    *is required
+                </label>
+                <textarea formControlName="message" required class="form-control" id="msg" rows="3" placeholder="Your message..."></textarea>
+            </div>
+            <div class="text-center pt-4">
+                <button class="btn btn-primary" (click)="sendMail()">Send</button> 
+            </div>
+          </form> 
+    </div>
+
+    <div class="container form-container " [@cBeenSent]="isFormVisible ?  'open' :'closed'">
+        <div id="lettera" class="text-center">
+            <img src="assets/img/mail.png" alt="">
+        </div>
+            
+        <div>
+            <h3 class="text-white text-center">The Email has been sent, thank you</h3>
+        </div>
+    </div>
+    
+</section>

@@ -1,0 +1,65 @@
+
+<section id="container" class="position-relative">
+    <div class="container-fluid p-0 position-relative bg">
+        <div class="w-100 position-relative" id="skills"
+        [ngStyle]="{'border-color':isVisible? '#FA666F' : 'rgba(0, 255, 221, 0.753)' }">
+            <h3 class="text-gray m-0 p-4 title" >Skills</h3>
+
+            <div class="d-flex justify-content-between  flex-wrap " 
+            [ngStyle]="{'height':isVisible? '100%' : '5rem' }">
+            
+                <div  *ngFor="let skill of skills" class="">
+                    <div class="logos-container mx-2 text-gray t-shadow" [@tag]="isVisible ? 'open' : 'closed'">
+                        <!-- <span class="text-pink">#</span> -->
+                        <div class="text-center logos shadow ">
+                            <div class="logos-logo">
+                                <i class="{{skill.logo}} colored"></i> 
+                            </div>
+                            <div>
+                                {{skill.name}}
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <div [@skillGraph]="isVisible ? 'closed' : 'open'" class="skill-graph ">
+                <div *ngFor="let skill of skills" class="skill-graph-loop ">
+                  
+                        <div class="d-flex skill">
+                            <div class="skill-name t-shadow "> <i class="{{skill.logo}} colored"></i> {{skill.name}}</div>
+                            <div class="skill-bar rounded ">
+                                <p class="skill-bar--number">{{skill.level}}%</p>
+                                <p class="skill-bar--name t-shadow">{{skill.name}}</p>
+                                <div  class="skill-bar--pct rounded"
+                                [@skillsSet]="isOpen ? {value:'open', params:{level:skill.level}} : 'closed'" ></div>
+                            </div>
+                        </div>
+                
+                    
+                </div>
+                
+
+            </div>
+        </div>
+        
+    </div>
+    <div class=" text-center toggle-container py-2" >
+        <div *ngIf="toggleClickable" (click)="toggle() " id="button-toggle" 
+        class="rounded t-shadow shadow"> 
+                <div *ngIf="isVisible">
+                    <p class=" m-0">Show</p>
+                    <img src="assets/img/barrow.png" alt="">
+                </div>
+                <div *ngIf="!isVisible" class="hide">
+                    <p class=" m-0">Hide</p>
+                    <img src="assets/img/barrow.png" alt="">
+                </div>          
+        </div>
+    </div>
+</section>

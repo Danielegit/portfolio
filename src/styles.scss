@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url('assets/img/road.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section{
+    min-height: 100vh !important;
+
+}
+
+
+
+*{
+    font-family: 'Baloo Paaji 2', cursive;
+}
+$gray: #737173;
+$dark: #19181A;
+$background: #26262A;
+$pink: #FA666F;
+.text-gray{
+    color: $gray;
+}
+.text-pink{
+    color: $pink;
+}
+
+.t-shadow{
+    text-shadow: 2px 2px 2px #111313;
+}
+// body{
+//     background-color: $background;
+// }
+@media only screen and (min-width: 1001px) {
+    .title{
+        font-size: 11rem!important;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    .title{
+        font-size: 8rem!important;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .title{
+        font-size: 4rem!important;
+    }
+  }

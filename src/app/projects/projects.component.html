@@ -1,0 +1,32 @@
+
+<section id="projects" class="container-fluid">
+    <h3 class="text-gray m-0 p-4 title tit" >Projects</h3>
+    <div class="d-flex justify-content-around flex-wrap">
+        <div *ngFor="let prj of projects" class="text-center">
+            <div class="card ">
+                <div>
+                    <p class="name">{{prj.name}}</p>
+                </div>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                      <div class="flip-box-front">
+                        <img src="{{prj.img}}"  >
+                     
+                      </div>
+                      <div class="flip-box-back pt-2 rounded">
+                        <p class="text-center">How it is built:</p>
+                        <p>{{prj.desc}}</p>
+                        <a href="{{prj.web}}" class="text-info link"  target="_blank">Link to the Site</a>
+                      </div>
+                    </div>
+                  </div>
+                <div class="pt-2">
+                    <a href="{{prj.web}}" target="_blank">
+                      Have a <span class="text-green">Look</span> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

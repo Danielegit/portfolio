@@ -1,0 +1,40 @@
+<div class="container-fluid" id="nav-container">
+    <nav class="row " id="nav">
+        <div class=" col-6 py-2 px-4 ">
+            <a href="">
+                <img src="assets/img/logo.png">
+            </a>
+        </div>
+        <div class="col-6 py-4 px-4 menu-toggle">
+            <div class="menu-btn" (click)="toggle()">
+                <img src="assets/img/menu.png" alt=""
+                [@toggleButton]="isVisible ? 'visible' : 'hidden'"> 
+            </div>
+            <div class="menu-btn" (click)="toggle()">
+                <img src="assets/img/close.png" alt=""
+                [@closeButton]="isVisible ? 'visible' : 'hidden'"> 
+            </div>
+        </div>
+        <div class="col-6 menu-dekstop py-4 px-4">
+
+            <a href="#skills">SKILLS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="contact-me">CONTACT</a>
+   
+        </div>
+
+
+        <div class="menu-phone"  
+        (click)="toggle()"
+            [@menuPhone]="isVisible ? 'visible' : 'hidden'" >
+
+            <a href="#skills"   [@menuLink]="isVisible ? 'visible' : 'hidden'">SKILLS</a>
+            <a href="#about"    [@menuLink]="isVisible ? 'visible' : 'hidden'">ABOUT</a>
+            <a href="#projects" [@menuLink]="isVisible ? 'visible' : 'hidden'">PROJECTS</a>
+            <a href="contact-me" [@menuLink]="isVisible ? 'visible' : 'hidden'">CONTACT</a>
+           
+        </div>
+    </nav>
+</div>
+

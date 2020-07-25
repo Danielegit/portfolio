@@ -1,0 +1,96 @@
+
+*{
+    font-family: 'Baloo Paaji 2', cursive;
+}
+$gray: #737173;
+$dark: #19181A;
+$background: #26262A;
+$pink: #FA666F;
+$green : #1cff2f;
+.green{
+    color: $green;
+}
+.pink{
+    color: $pink;
+}
+#nav-container{
+    position: fixed;
+    z-index: 9;
+    opacity: 0.9;
+}
+#nav{
+    z-index: 200;
+    position: relative;
+    background-color: $dark;
+    color: $gray;
+    .menu-dekstop{
+        display: flex;
+        justify-content: flex-end;
+        a{
+            font-size: 1.4rem;
+            margin-left:10px;
+            color: $gray; 
+            text-decoration: none!important;
+            &:hover{
+
+                color: white;
+               // color:$green;
+            }
+        }
+    }
+}
+.menu-btn{  
+    position: absolute;
+    right: 5px;
+    top: 0.7rem;
+    max-width: 4rem;
+    padding: 2px;
+    cursor: pointer;
+    &:hover{
+        opacity:  0.8!important;
+    }
+    img{
+       
+        width: 100%;
+        transition: opacity 0.3s;
+        
+    }
+}
+.menu-toggle{
+    display: none;
+}
+.menu-phone{
+    top: 5.5rem;
+    width: 100%;
+    position: absolute;
+    border-top: 1px solid $gray;
+    a{
+        font-size: 1.6rem;
+        text-align: center;
+        color: $gray;
+        
+        width: 100%;
+        display: block;
+        background-color: $dark;
+        border-bottom: 1px solid $gray;
+        &:hover{
+            text-decoration: none;
+            color:$green;
+            border-bottom: 1px solid $green;
+            
+        }
+    }
+}
+@media only screen and (max-width: 750px) {
+    .menu-dekstop{
+        
+        display: none!important;
+    }
+    .menu-toggle{
+        text-align: end;
+        //background-color: red;
+        display: block;
+    }
+  }
+
+
